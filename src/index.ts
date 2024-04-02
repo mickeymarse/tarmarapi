@@ -1,7 +1,11 @@
-import { Elysia } from "elysia";
+import { Elysia } from 'elysia';
+import { db } from './db/db';
+import { migrate } from 'drizzle-orm/libsql/migrator';
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+(async () => {
+  await migrate(db, { migrationsFolder: Bun.resolveSync(__dirname, '../migrations') });
+})();
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+const app = new Elysia().get('/', () => 'Hello Elysia').listen(3000);
+
+console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
