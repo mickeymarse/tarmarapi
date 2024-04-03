@@ -1,23 +1,16 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "3e916f45-c2a2-40fd-992c-aa096a9d0310",
+  "id": "46def40a-afbc-4990-b62b-e26cd3b30e48",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "tarots": {
       "name": "tarots",
       "columns": {
-        "id": {
-          "name": "id",
-          "type": "integer",
-          "primaryKey": true,
-          "notNull": true,
-          "autoincrement": false
-        },
         "name": {
           "name": "name",
           "type": "text",
-          "primaryKey": false,
+          "primaryKey": true,
           "notNull": true,
           "autoincrement": false
         },
@@ -30,7 +23,7 @@
         },
         "rank": {
           "name": "rank",
-          "type": "TEXT",
+          "type": "text",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
@@ -39,7 +32,7 @@
           "name": "suit",
           "type": "text",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
           "autoincrement": false
         },
         "element": {
@@ -58,14 +51,14 @@
         },
         "sign": {
           "name": "sign",
-          "type": "TEXT",
+          "type": "text",
           "primaryKey": false,
-          "notNull": true,
+          "notNull": false,
           "autoincrement": false
         },
         "meaning": {
           "name": "meaning",
-          "type": "TEXT",
+          "type": "text",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false

@@ -1,25 +1,14 @@
-import { integer, sqliteTable, text, customType } from 'drizzle-orm/sqlite-core';
-
-// Custom types
-// const integerOrText = customType<{ data: number | string }>({
-//   dataType: () => 'TEXT',
-// });
-// const stringArray = customType<{ data: string[]; driverData: string }>({
-//   dataType: () => 'TEXT',
-//   toDriver: (value: string[]): string => JSON.stringify(value),
-//   fromDriver: (value: string): string[] => JSON.parse(value),
-// });
+import { sqliteTable, text } from 'drizzle-orm/sqlite-core';
 
 export const tarots = sqliteTable('tarots', {
-  id: integer('id').primaryKey(),
-  name: text('name').notNull(),
+  name: text('name').notNull().primaryKey(),
   type: text('type').notNull(),
   rank: text('rank').notNull(),
-  suit: text('suit'),
+  suit: text('suit').notNull(),
   element: text('element').notNull(),
   planet: text('planet'),
-  sign: text('sign').notNull(),
-  meaning: text('meaning').notNull(),
+  sign: text('sign', { mode: 'json' }),
+  meaning: text('meaning', { mode: 'json' }).notNull(),
 });
 
 export type InsertTarot = typeof tarots.$inferInsert;
