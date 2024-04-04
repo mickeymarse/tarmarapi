@@ -11,5 +11,5 @@ export const tarots = sqliteTable('tarots', {
   meaning: text('meaning', { mode: 'json' }).notNull(),
 });
 
-export type InsertTarot = typeof tarots.$inferInsert;
+// export type InsertTarot = typeof tarots.$inferInsert;
 export type SelectTarot = typeof tarots.$inferSelect;
