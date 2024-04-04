@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "46def40a-afbc-4990-b62b-e26cd3b30e48",
+  "id": "244b4804-4c7b-4c04-889d-80e456aea373",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "tarots": {
@@ -32,7 +32,7 @@
           "name": "suit",
           "type": "text",
           "primaryKey": false,
-          "notNull": true,
+          "notNull": false,
           "autoincrement": false
         },
         "element": {

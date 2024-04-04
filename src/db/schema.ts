@@ -4,7 +4,7 @@ export const tarots = sqliteTable('tarots', {
   name: text('name').notNull().primaryKey(),
   type: text('type').notNull(),
   rank: text('rank').notNull(),
-  suit: text('suit').notNull(),
+  suit: text('suit'),
   element: text('element').notNull(),
   planet: text('planet'),
   sign: text('sign', { mode: 'json' }),
