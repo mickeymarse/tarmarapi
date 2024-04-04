@@ -1,17 +1,18 @@
 import { Elysia } from 'elysia';
-import { getAllTarots, insertTarot } from './functions/tarot';
+import { getAllTarots, getRandomTarot } from './functions/tarot';
 
 const app = new Elysia()
   .get('/', () => 'Hello Elysia')
-  .get('/tarots', async () => {
+  .get('/tarots/all', async () => {
     const data = await getAllTarots();
     console.log(data);
     return data;
   })
-  // .post('/tarots', async ({ body }: any) => {
-  //   const newTarot = await insertTarot(body);
-  //   return newTarot;
-  // })
+  .get('/tarots/random', async () => {
+    const data = await getRandomTarot();
+    console.log(data);
+    return data;
+  })
   .listen(3000);
 
 console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`);

@@ -6,7 +6,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
     "seed": "bun --bun run src/functions/seed.ts",
-    "migrate": "bun --bun run src/db/migrate.ts"
+    "migrate": "bun --bun run src/db/migrate.ts",
+    "drop": "bunx drizzle-kit drop",
+    "generate": "bunx drizzle-kit generate:sqlite",
+    "push": "bunx drizzle-kit push:sqlite"
   },
   "dependencies": {
     "@libsql/client": "^0.6.0",
