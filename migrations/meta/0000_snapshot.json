@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "244b4804-4c7b-4c04-889d-80e456aea373",
+  "id": "bc39299c-69c3-4bec-ba66-bdb96b841b38",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "tarots": {

@@ -1,7 +1,7 @@
 import { db } from '../db/db';
 import * as schema from '../db/schema';
 
-await db.delete(schema.tarots);
+// await db.delete(schema.tarots);
 
 await db.insert(schema.tarots).values([
   // {
