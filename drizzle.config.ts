@@ -9,7 +9,7 @@ import type { Config } from 'drizzle-kit';
 
 export default {
   schema: './src/db/schema.ts',
-  out: './migrations',
+  out: './src/db/migrations',
   driver: 'turso',
   dbCredentials: {
     url: process.env.TURSO_CONNECTION_URL!,
