@@ -1,6 +1,8 @@
 {
   "name": "tarmarapi",
   "version": "1.0.0",
+  "module": "src/index.ts",
+  "type": "module",
   "description": "An API for the classic Tarot de Marseille buil with Bun!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,6 +26,5 @@
   "devDependencies": {
     "bun-types": "latest",
     "drizzle-kit": "^0.20.14"
-  },
-  "module": "src/index.js"
+  }
 }

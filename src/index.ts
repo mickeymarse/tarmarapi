@@ -13,6 +13,8 @@ const readme = await unified()
   .use(remarkHtml)
   .process(await read('README.md'));
 
+const port = process.env.PORT;
+
 const app = new Elysia()
   .use(html())
   .get(
@@ -34,6 +36,6 @@ const app = new Elysia()
     console.log(data);
     return data;
   })
-  .listen(3000);
+  .listen({ port } || 8080);
 
 console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
