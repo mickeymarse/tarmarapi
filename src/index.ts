@@ -1,5 +1,5 @@
 import { Elysia } from 'elysia';
-import { getAllTarots, getRandomTarot } from './functions/tarot';
+import { getAllTarots, getRandomTarot } from './scripts/tarot';
 
 const app = new Elysia()
   .get('/', () => 'Hello Elysia')

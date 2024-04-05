@@ -1,12 +1,12 @@
 {
   "name": "tarmarapi",
-  "version": "1.0.50",
+  "version": "1.0.0",
   "description": "An API for the classic Tarot de Marseille buil with Bun!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
-    "seed": "bun --bun run src/functions/seed.ts",
-    "migrate": "bun --bun run src/db/migrate.ts",
+    "seed": "bun --bun run src/scripts/seed.ts",
+    "migrate": "bun --bun run src/scripts/migrate.ts",
     "drop": "bunx drizzle-kit drop",
     "generate": "bunx drizzle-kit generate:sqlite",
     "push": "bunx drizzle-kit push:sqlite"
