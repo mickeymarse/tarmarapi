@@ -8,7 +8,7 @@ export async function getAllTarots(): Promise<Array<SelectTarot>> {
 
 export async function getRandomTarot(): Promise<Array<SelectTarot>> {
   const cards = await db.select().from(tarots);
-  const randomCard = [cards[Math.floor(Math.random() * cards.length + 1)]];
+  const randomCard = [cards[Math.floor(Math.random() * cards.length)]];
   return randomCard;
   // const randomRow = await db
   //   .select()
