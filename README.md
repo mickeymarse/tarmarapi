@@ -15,7 +15,7 @@ One thing, for example, is the reversed card meaning. I don't believe in that. I
 
 ## Onto the tech side
 
-I've built this up using the new JS runtime [Bun](https://bun.sh/) together with the [ElysiaJS](https://elysiajs.com/) framework. The data rest in a [Turso](https://turso.tech/) edge SQLite database and requests are dealth with the help of [Drizzle ORM](https://orm.drizzle.team/).
+I've built this app using the new JS runtime [Bun](https://bun.sh/) together with the [ElysiaJS](https://elysiajs.com/) framework. The data rest in a [Turso](https://turso.tech/) edge SQLite database and requests are dealth with the help of [Drizzle ORM](https://orm.drizzle.team/). The app is deployed using [Fly](https://fly.io/).
 
 Why using tech that is barely production ready?  
 ~~Because they all have cute mascots.~~  
@@ -44,11 +44,11 @@ Example of data fetched from the API:
 
 There are only two routes available so far and the data/cards will need some updates and reworking, but with some extra work, it can already be used for simple readings. I aim to update soon in order to avoid the needed extra work for the user.
 
-### `GET` all [[try]](http://localhost:3000/tarots/all)
+### `GET /tarots/all` [[try]](https://tarmarapi.fly.dev/tarots/all)
 
 Fetch all the cards in the deck/db.
 
-### `GET` random [[try]](http://localhost:3000/tarots/random)
+### `GET /tarots/random` [[try]](https://tarmarapi.fly.dev/tarots/random)
 
 Fetch one random card from the deck.
 

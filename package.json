@@ -1,9 +1,12 @@
 {
   "name": "tarmarapi",
-  "version": "1.0.0",
+  "version": "1.0.50",
+  "module": "src/index.ts",
+  "type": "module",
   "description": "An API for the classic Tarot de Marseille buil with Bun!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bun run src/index.ts",
     "dev": "bun run --watch src/index.ts",
     "seed": "bun --bun run src/scripts/seed.ts",
     "migrate": "bun --bun run src/scripts/migrate.ts",
@@ -12,13 +15,17 @@
     "push": "bunx drizzle-kit push:sqlite"
   },
   "dependencies": {
+    "@elysiajs/html": "^1.0.2",
     "@libsql/client": "^0.6.0",
     "drizzle-orm": "^0.30.6",
-    "elysia": "latest"
+    "elysia": "latest",
+    "remark-html": "^16.0.1",
+    "remark-parse": "^11.0.0",
+    "to-vfile": "^8.0.0",
+    "unified": "^11.0.4"
   },
   "devDependencies": {
     "bun-types": "latest",
     "drizzle-kit": "^0.20.14"
-  },
-  "module": "src/index.js"
+  }
 }
