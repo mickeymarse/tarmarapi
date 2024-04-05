@@ -1,12 +1,12 @@
 # syntax = docker/dockerfile:1
 
-# Adjust NODE_VERSION as desired
-ARG NODE_VERSION=21.1.0
-FROM node:${NODE_VERSION}-slim as base
+# Adjust BUN_VERSION as desired
+ARG BUN_VERSION=1.0.50
+FROM oven/bun:${BUN_VERSION} as base
 
-LABEL fly_launch_runtime="NodeJS"
+LABEL fly_launch_runtime="Bun"
 
-# NodeJS app lives here
+# Bun app lives here
 WORKDIR /app
 
 # Set production environment
@@ -21,14 +21,11 @@ RUN apt-get update -qq && \
     apt-get install -y python-is-python3 pkg-config build-essential 
 
 # Install node modules
-COPY --link package.json .
-RUN npm install --production=false
+COPY --link bun.lockb package.json ./
+RUN bun install --ci
 
 # Copy application code
 COPY --link . .
-
-# Remove development dependencies
-RUN npm prune --production
 
 
 # Final stage for app image
@@ -38,4 +35,5 @@ FROM base
 COPY --from=build /app /app
 
 # Start the server by default, this can be overwritten at runtime
-CMD [ "npm", "run", "start" ]
+EXPOSE 8080
+CMD [ "bun", "run", "start" ]

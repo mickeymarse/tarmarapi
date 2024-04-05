@@ -1,6 +1,6 @@
 {
   "name": "tarmarapi",
-  "version": "1.0.0",
+  "version": "1.0.50",
   "module": "src/index.ts",
   "type": "module",
   "description": "An API for the classic Tarot de Marseille buil with Bun!",
