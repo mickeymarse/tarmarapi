@@ -58,18 +58,18 @@ const homepageHTML: string = `
 
 <p>Example of data fetched from the API:</p>
 
-<code> [\n 
-  {\n 
-    "name": "Nine of Pentacles",\n 
-    "type": "minor arcana",\n 
-    "rank": "9",\n 
-    "suit": "pentacles",\n
-    "element": "earth",\n
-    "planet": "venus",\n
-    "sign": ["virgo"],\n
-    "meaning": ["luxury, self-sufficiency,independence"]\n 
-  }\n 
-  ] </code>
+<pre> [ 
+  { 
+    "name": "Nine of Pentacles", 
+    "type": "minor arcana", 
+    "rank": "9", 
+    "suit": "pentacles",
+    "element": "earth",
+    "planet": "venus",
+    "sign": ["virgo"],
+    "meaning": ["luxury, self-sufficiency,independence"] 
+  } 
+  ] </pre>
 
 <h2>Usage</h2>
 
