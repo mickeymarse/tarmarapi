@@ -18,11 +18,7 @@
     "@elysiajs/html": "^1.0.2",
     "@libsql/client": "^0.6.0",
     "drizzle-orm": "^0.30.6",
-    "elysia": "latest",
-    "remark-html": "^16.0.1",
-    "remark-parse": "^11.0.0",
-    "to-vfile": "^8.0.0",
-    "unified": "^11.0.4"
+    "elysia": "latest"
   },
   "devDependencies": {
     "bun-types": "latest",

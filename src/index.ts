@@ -1,17 +1,8 @@
 import { Elysia } from 'elysia';
 import { html } from '@elysiajs/html';
-
-import remarkHtml from 'remark-html';
-import remarkParse from 'remark-parse';
-import { read } from 'to-vfile';
-import { unified } from 'unified';
+import homepage from './homepage.ts';
 
 import { getAllTarots, getRandomTarot } from './scripts/tarot';
-
-const readme = await unified()
-  .use(remarkParse)
-  .use(remarkHtml)
-  .process(await read('README.md'));
 
 const port = process.env.PORT;
 
@@ -21,8 +12,8 @@ const app = new Elysia()
     '/',
     () =>
       `<html lang="en">
-  <body>  
-  ${readme}
+  <body style="margin: 1% 30%; background-color: #221C35; color: #B5CFED;">  
+  ${homepage}
     </body>
     </html>`
   )
@@ -38,4 +29,4 @@ const app = new Elysia()
   })
   .listen({ port } || 8080);
 
-console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
+console.log(`🦊 Elysia is running at http://${app.server?.hostname}:${app.server?.port}`);
