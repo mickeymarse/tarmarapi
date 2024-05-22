@@ -1,4 +1,19 @@
 const homepageHTML: string = `
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descriptio" content="An API for the Tarot de Marseille built with Bun.">
+    <title>TarMarApi</title>
+    <style>
+      pre {
+          background-color: black;
+          width: fit-content;
+          padding: 5px;
+          font-size: large;
+      }
+    </style>
+</head>
+
 <h1>TarMarAPI</h1>
 
 <h2>What is TarMarAPI</h2>

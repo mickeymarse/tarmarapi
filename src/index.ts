@@ -10,9 +10,9 @@ const app = new Elysia()
   .use(html())
   .get(
     '/',
-    () =>
+    ({ html }) =>
       `<html lang="en">
-  <body style="margin: 1% 30%; background-color: #221C35; color: #B5CFED;">  
+  <body style="margin: 1% 30%; padding: 3px; background-color: #221C35; color: #B5CFED;">  
   ${homepage}
     </body>
     </html>`
