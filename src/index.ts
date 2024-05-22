@@ -12,7 +12,7 @@ const app = new Elysia()
     '/',
     ({ html }) =>
       `<html lang="en">
-  <body style="margin: 1% 30%; padding: 3px; background-color: #221C35; color: #B5CFED;">  
+  <body style="margin: auto; padding-top: 5px; padding-bottom: 5px; width: min-content; background-color: #221C35; color: #B5CFED;">  
   ${homepage}
     </body>
     </html>`
